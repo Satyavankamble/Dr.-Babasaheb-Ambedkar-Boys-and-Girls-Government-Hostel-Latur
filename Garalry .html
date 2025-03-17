@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Section</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="logo2.png" type="image/icon type">   
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c5b0c5b0e.js" crossorigin="anonymous"></script>
+           
+</head>
+<body>
+    <header class="header">
+        <div class="main-header">
+            <!-- Left Side Images -->
+            <div class="logo-section">
+                <div class="logo-images">
+                    <img src="samaj.png" alt="samaj">
+                    <img src="social.png" alt="social">
+                    <img src="amrut.png" alt="amrut">
+                   
+                </div>
+            </div>
+
+            <!-- Center Institute Info -->
+            <div class="institute-info">
+                <div class="institute-name">
+                    डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर. युनिट 1,2,3,4
+                </div>
+                <div class="institute-subtitle">
+                    (अतिरिक्त एम.आय.डी.सी. मांजरा कारखाना गेट,खंडापूर रोड लातूर)
+                </div>
+            </div>
+
+            <!-- Right Side Images -->
+            <div class="logo-section">
+                <div class="logo-images">
+                    <img src="Dr.BabaSahaeb.Ambedkar.jpg" alt="dr.babasaheb">
+                    <img src="Shahu Maharaj.jpg" alt="Shahu Maharaj">
+                    <img src="Jotiba Phule.jpg" alt="Jotiba Phule">
+                    <img src="savitribai.jpeg" alt="savitribai phule">
+                    <img src="aana.png" alt="aana logo">
+                </div>
+            </div>
+        </div>
+        </header>
+
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" onclick="closeMenu()" >Home</a></li>
+            <li><a href="https://hostel.mahasamajkalyan.in/" onclick="closeMenu()">Admission</a></li>
+            <li><a href="#" onclick="closeMenu()">Staff</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Section -->
+ <div class="gallery-container">
+    <h2 class="gallery-title">Photo Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('hostel.jpg', 'डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर')">
+            <img src="hostel.jpg" alt="Nature">
+            <div class="gallery-caption">डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('logo2.png', 'डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर')">
+            <img src="logo2.png" alt="Campus">
+            <div class="gallery-caption">डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('hostel.jpg', 'डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर')">
+            <img src="hostel.jpg" alt="Students">
+            <div class="gallery-caption">डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('logo2.png', 'डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर')">
+            <img src="logo2.png" alt="Education">
+            <div class="gallery-caption">डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर</div>
+        </div>
+</div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-bottom">
+        <p>&copy; 2025 डॉ. बाबासाहेब आंबेडकर 1000 मुला मुलींचे शासकीय वस्तीगृह लातुर.</p>
+    </div>
+</footer>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
